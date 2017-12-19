@@ -13,7 +13,7 @@ def blog_view(request):
     entry = BlogRecordService.by_id(blog_id, request)
     if not entry:
         return HTTPNotFound()
-    author = UserService.by_name(entry.author_id, request)
+    author = UserService.by_id(entry.author_id, request)
     if not author:
         return HTTPNotFound()
     return {'entry': entry, 'author': author}
