@@ -1,0 +1,3 @@
+[run]
+source = blog1
+omit = blog1/test*
